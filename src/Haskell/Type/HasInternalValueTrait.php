@@ -17,49 +17,16 @@
 
 namespace Haskell\Type;
 
-use Haskell\Type\HasInternalValueTrait;
-
-class ListType implements \Iterator
+trait HasInternalValueTrait
 {
-    private $position;
     private $value;
 
     public function __construct($value)
     {
-        if (!is_array($value) && !$value instanceof Traversable) {
-            throw new \InvalidArgumentException("Must construct list type will an array or instance of \\Traversable");
-        }
-
         $this->value = $value;
-        $this->rewind();
     }
 
-    function rewind()
-    {
-        $this->position = 0;
-    }
-
-    function current()
-    {
-        return $this->value[$this->position];
-    }
-
-    function key()
-    {
-        return $this->position;
-    }
-
-    function next()
-    {
-        ++$this->position;
-    }
-
-    function valid()
-    {
-        return isset($this->value[$this->position]);
-    }
-
-    public function getInternalType()
+    public function getInternalValue()
     {
         return $this->value;
     }

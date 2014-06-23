@@ -2,21 +2,11 @@
 
 namespace Haskell\Applicative;
 
-use Haskell\Functor\FunctorInterface;
+use Haskell\Type\HasInternalValueTrait;
 
 class Just implements ApplicativeInterface
 {
-    private $value;
-
-    public function __construct($value)
-    {
-        $this->value = $value;
-    }
-
-    public function getInternalValue()
-    {
-        return $this->value;
-    }
+    use HasInternalValueTrait;
 
     public function apply(ApplicativeInterface $f)
     {

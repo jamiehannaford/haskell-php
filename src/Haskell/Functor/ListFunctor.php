@@ -3,15 +3,11 @@
 namespace Haskell\Functor;
 
 use Haskell\Type\ListType;
+use Haskell\Type\HasInternalValueTrait;
 
 class ListFunctor implements FunctorInterface
 {
-    private $value;
-
-    public function __construct(ListType $value)
-    {
-        $this->value = $value;
-    }
+    use HasInternalValueTrait;
 
     public function fmap($functions)
     {

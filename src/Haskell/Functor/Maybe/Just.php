@@ -2,14 +2,11 @@
 
 namespace Haskell\Functor\Maybe;
 
+use Haskell\Type\HasInternalValueTrait;
+
 class Just extends Maybe
 {
-    private $value;
-
-    public function __construct($value)
-    {
-        $this->value = $value;
-    }
+    use HasInternalValueTrait;
 
     public function fmap($fn)
     {
@@ -18,10 +15,5 @@ class Just extends Maybe
         }
 
         return new self(call_user_func($fn, $this->value));
-    }
-
-    public function getInternalValue()
-    {
-        return $this->value;
     }
 }
