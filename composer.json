@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-0": {
+            "Haskell": "src"
+        }
+    },
+    "require": {
+        "phpspec/phpspec": "~2.0"
+    }
+}
