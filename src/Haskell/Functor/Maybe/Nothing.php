@@ -4,7 +4,7 @@ namespace Haskell\Functor\Maybe;
 
 class Nothing extends Maybe
 {
-    public function fmap(callable $fn)
+    public function fmap($fn)
     {
         return new self();
     }

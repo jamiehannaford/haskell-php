@@ -16,7 +16,7 @@ class JustSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Haskell\Functor\Maybe');
+        $this->shouldHaveType('Haskell\Functor\Maybe\Maybe');
     }
 
     function it_has_internal_value()
@@ -27,7 +27,7 @@ class JustSpec extends ObjectBehavior
     function it_should_execute_fmap_and_return_a_just()
     {
         $fn = function ($a) {};
-        $this->fmap($fn)->shouldReturnAnInstanceOf('Haskell\Functor\Just');
+        $this->fmap($fn)->shouldReturnAnInstanceOf('Haskell\Functor\Maybe\Just');
     }
 
     function it_should_execute_fmap_over_its_internal_value()
