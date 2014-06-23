@@ -1,6 +1,6 @@
 <?php
 
-namespace Haskell\Functor;
+namespace Haskell\Functor\Maybe;
 
 class Nothing extends Maybe
 {

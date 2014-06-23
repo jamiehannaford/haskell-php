@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Haskell\Functor;
+namespace spec\Haskell\Functor\Maybe;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;

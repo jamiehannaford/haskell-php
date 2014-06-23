@@ -20,5 +20,5 @@ namespace Haskell\Functor;
 
 interface FunctorInterface
 {
-    public function fmap(callable $fn);
+    public function fmap($fn);
 }
